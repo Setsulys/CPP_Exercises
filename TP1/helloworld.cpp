@@ -1,7 +1,14 @@
 #include <iostream>
+
+using namespace std;
+
 int main(int argc, char const *argv[]){
-    std::cout<< "Hello world!" << std::endl;
-    int var =0;
-    std::cin >> var;
+    cout<< "Hello world!" << endl;
+    //int var =0;
+    //cin >> var;
+    string  name;
+    cout <<"What's your name?";
+    cin >> name;
+    cout << "Hello " << name << endl;
     return 0;
 }
