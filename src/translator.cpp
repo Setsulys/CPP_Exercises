@@ -10,6 +10,6 @@ int main()
         cout << "This is a translator, but it does nothing for now..." << endl;
         cin >> exitcommand;
     }
-    cout << "sortie de la boucle" << endl;
+    cout << "sortie du programme" << endl;
     return 0;
 }
