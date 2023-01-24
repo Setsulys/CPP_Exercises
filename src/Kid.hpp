@@ -17,8 +17,16 @@ class Kid
         {
             return _name;
         }
+        
         int get_money() const
         {
             return _money;
         }
+
+
 };
+
+std::ostream& operator<<(std::ostream& stream, const Kid& kid)
+{
+    return stream << kid.get_name() + " has " + std::to_string(kid.get_money()) + " euros.";
+}
