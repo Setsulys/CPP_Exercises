@@ -1,5 +1,7 @@
 #pragma once
 #include<string>
+#include <optional>
+#include "Plush.hpp"
 class PlushStore
 {
     private:
@@ -60,4 +62,11 @@ class PlushStore
         {
             return _experience;
         }
+
+        std::optional<Plush> buy(int value)
+        {
+            _wealth_amount+= value;
+            return std::nullopt;
+        }
+
 };

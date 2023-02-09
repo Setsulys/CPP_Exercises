@@ -4,6 +4,7 @@
 
 #include <catch2/catch_test_macros.hpp>
 #include <sstream>
+#include <iostream>
 
 TEST_CASE("Test 12 - "
           "La classe Kid peut etre affichee dans un stream de sortie")

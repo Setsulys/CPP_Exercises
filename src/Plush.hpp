@@ -4,13 +4,13 @@ class Plush
     private:
         int _cost;
     public:
-        Plush()
-        : _cost {10}
+        Plush(): 
+        _cost {10}
         {
 
         }
-        Plush(int plush_cost)
-        :_cost {plush_cost}
+        Plush(int plush_cost):
+        _cost {plush_cost}
         {
 
         }
