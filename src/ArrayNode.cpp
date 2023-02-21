@@ -7,5 +7,10 @@
 
         std::string ArrayNode::print() const
         {
-            return "[]";
+            std::string str ="[";
+            for(unsigned i = 0; i < _nodes.size();i++)
+            {
+                str += _nodes.at(i) -> print();
+            }
+            return str + "]";
         }

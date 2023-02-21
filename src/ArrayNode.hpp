@@ -8,7 +8,7 @@
 class ArrayNode : public Node
 {
     private:
-        std::vector<Node> _nodes;
+        std::vector<NodePtr> _nodes;
     public:
         ArrayNode()
         {
