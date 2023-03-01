@@ -19,5 +19,5 @@ class ArrayNode : public Node
         virtual std::string print() const override;
         static std::unique_ptr<ArrayNode> make_ptr();
         int child_count() const;
-        //void push_back(NodePtr node);
+        void push_back(NodePtr node);
 };

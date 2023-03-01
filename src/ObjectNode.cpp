@@ -11,12 +11,23 @@
             std::string str ="{";
             for(auto it = _nodes.cbegin() ; it != _nodes.cend();it++)
             {
-                str+= separator +"\n\t\"" + it->first+"\": \"" + it->second -> print()+"\"";
+                str+= separator +"\"" + it->first+"\":" + it->second -> print();
                 separator =",";
             }
             return str +"}";
         }
-std::unique_ptr<ObjectNode> ObjectNode::make_ptr()
-{
-    return std::make_unique<ObjectNode>();
-}
+
+        std::unique_ptr<ObjectNode> ObjectNode::make_ptr()
+        {
+            return std::make_unique<ObjectNode>();
+        }
+
+        int ObjectNode::child_count() const
+        {
+            return _nodes.size();
+        }
+
+        void ObjectNode::insert(std::string str, NodePtr node)
+        {
+            _nodes.insert({str,std::move(node)});
+        }

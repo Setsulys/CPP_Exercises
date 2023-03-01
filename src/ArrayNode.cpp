@@ -7,10 +7,12 @@
 
         std::string ArrayNode::print() const
         {
+            std::string separator="";
             std::string str ="[";
             for(unsigned i = 0; i < _nodes.size();i++)
             {
-                str += _nodes.at(i) -> print();
+                str += separator+ _nodes.at(i) -> print();
+                separator=",";
             }
             return str + "]";
         }
@@ -25,7 +27,7 @@
             return _nodes.size();
         }
 
-        // void ArrayNode::push_back(NodePtr node)
-        // {
-        //     _nodes.push_back(node);
-        // }
+        void ArrayNode::push_back(NodePtr node)
+        {   
+            _nodes.push_back(std::move(node));
+        }

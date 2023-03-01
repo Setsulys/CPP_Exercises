@@ -18,4 +18,6 @@ class ObjectNode : public Node
         NodeKind kind();
         virtual std::string print() const override;
         static std::unique_ptr<ObjectNode> make_ptr();
+        int child_count() const;
+        void insert(std::string str,NodePtr node);
 };
