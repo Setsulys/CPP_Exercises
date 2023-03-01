@@ -20,4 +20,6 @@ class ArrayNode : public Node
         static std::unique_ptr<ArrayNode> make_ptr();
         int child_count() const;
         void push_back(NodePtr node);
+        unsigned int height() const;
+        unsigned int node_count() const;
 };

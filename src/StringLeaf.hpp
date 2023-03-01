@@ -20,6 +20,7 @@ class StringLeaf : public Leaf
         virtual std::string print() const override;
         std::string data () const;
         static std::unique_ptr<StringLeaf> make_ptr(std::string value);
-
+        unsigned int height() const;
+        unsigned int node_count() const;
         
 };

@@ -21,6 +21,8 @@ class IntLeaf : public Leaf
         virtual std::string print() const override;
         int data () const;
         static std::unique_ptr<IntLeaf> make_ptr(int value);
+        unsigned int height() const;
+        unsigned int node_count() const;
 
         
 };

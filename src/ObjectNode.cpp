@@ -31,3 +31,26 @@
         {
             _nodes.insert({str,std::move(node)});
         }
+
+        unsigned int ObjectNode::height() const
+        {
+            unsigned int result =0;
+            if(this->child_count()==0)
+            {
+                return 0;
+            }
+            for(const auto& child : _nodes)
+            {
+                unsigned int childheight = child.second->height();
+                if(childheight > result)
+                {
+                    result = childheight;
+                }
+            }
+            return result;
+        }
+
+        unsigned int ObjectNode::node_count()
+        {
+            return 1+ _nodes.size();
+        }

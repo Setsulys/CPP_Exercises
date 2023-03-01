@@ -20,4 +20,6 @@ class ObjectNode : public Node
         static std::unique_ptr<ObjectNode> make_ptr();
         int child_count() const;
         void insert(std::string str,NodePtr node);
+        unsigned int height() const;
+        unsigned int node_count();
 };

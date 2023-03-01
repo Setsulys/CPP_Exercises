@@ -15,7 +15,17 @@
             return _value;
         }
 
-std::unique_ptr<StringLeaf> StringLeaf::make_ptr(std::string value)
-{
-    return std::make_unique<StringLeaf>(value);
-}
+        std::unique_ptr<StringLeaf> StringLeaf::make_ptr(std::string value)
+        {
+            return std::make_unique<StringLeaf>(value);
+        }
+
+        unsigned int StringLeaf::height() const
+        {
+            return 0;
+        }
+
+        unsigned int StringLeaf::node_count() const
+        {
+            return 1;
+        }
