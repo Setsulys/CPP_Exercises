@@ -19,6 +19,7 @@ class StringLeaf : public Leaf
         NodeKind kind() const;
         virtual std::string print() const override;
         std::string data () const;
+        static std::unique_ptr<StringLeaf> make_ptr(std::string value);
 
         
 };

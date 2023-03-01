@@ -14,3 +14,18 @@
             }
             return str + "]";
         }
+
+        std::unique_ptr<ArrayNode> ArrayNode::make_ptr()
+        {
+            return std::make_unique<ArrayNode>();
+        }
+
+        int ArrayNode::child_count() const
+        {
+            return _nodes.size();
+        }
+
+        // void ArrayNode::push_back(NodePtr node)
+        // {
+        //     _nodes.push_back(node);
+        // }

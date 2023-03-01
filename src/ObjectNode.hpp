@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include <vector>
+#include <map>
 #include "Node.hpp"
 #include "NodeKind.hpp"
 
@@ -8,7 +8,7 @@
 class ObjectNode : public Node
 {
     private:
-        std::vector<Node> _nodes;
+        std::map<std::string,NodePtr> _nodes;
     public:
         ObjectNode()
         {
@@ -17,5 +17,5 @@ class ObjectNode : public Node
 
         NodeKind kind();
         virtual std::string print() const override;
-
+        static std::unique_ptr<ObjectNode> make_ptr();
 };
