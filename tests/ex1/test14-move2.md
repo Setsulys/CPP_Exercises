@@ -59,21 +59,30 @@ In each of the following case:
 
 - Q22.1 (Youssef):
   * a. Is the string `youssef_bergeron_name` copied to call `Person(const std::string& name)`?
+  > No
   * b. Is it copied by `_name { name }` ?
+  > Yes
   * c. Could copies be avoided somehow?
+  > Yes
 - Q22.2 (Clément):
   * a. Is the string `clement_chomicki_name` copied to call `Person(const std::string& name)`?
+  > No
   * b. Is it copied by `_name { name }` ?
+  > Yes
   * c. Could copies be avoided somehow?
+  > Yes
 - Q22.3 (Victor): 
   * a. What is the type of the expression `"Victor Marsault"`
+  > std::string
   * b. Is it copied copied to call `Person(const std::string& name)`?
   * c. Is it copied by `_name { name }` ?
+  > Yes
   * d. Could copies be avoided somehow?
 - Q22.4 (Céline)
   * a. what is the type of the expression `celine+" "+noel` ?
   * b. Is it copied copied to call `Person(const std::string& name)`?
   * c. Is it copied by `_name { name }` ?
+  > Yes
   * d. Could copies be avoided somehow?
 
 
