@@ -27,11 +27,10 @@ const Ingredient& Kitchen::register_ingredient(Ingredient ingredient)
 
 const Ingredient * Kitchen::find_ingredient(std::string ingred) const
 {
-
     for(const auto &it : _ingredient)
     {
         auto name = it.name;
-        for(auto& c : name)
+        for(auto c : name)
         {
             c = tolower(c);
         }
