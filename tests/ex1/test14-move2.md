@@ -73,17 +73,22 @@ In each of the following case:
   > Yes
 - Q22.3 (Victor): 
   * a. What is the type of the expression `"Victor Marsault"`
-  > std::string
+  > const char *
   * b. Is it copied copied to call `Person(const std::string& name)`?
+  > Yes
   * c. Is it copied by `_name { name }` ?
   > Yes
   * d. Could copies be avoided somehow?
+  > Yes
 - Q22.4 (Céline)
   * a. what is the type of the expression `celine+" "+noel` ?
+  > const char * ``il construit dans une place mémoire ou il peut``
   * b. Is it copied copied to call `Person(const std::string& name)`?
+  > Yes ``Depend de si il est construit dans le constructeur ou non``
   * c. Is it copied by `_name { name }` ?
   > Yes
   * d. Could copies be avoided somehow?
+  > Yes
 
 
 [Optional] What about `std::string_view` ?
